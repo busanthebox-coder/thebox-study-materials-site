@@ -1,0 +1,25 @@
+{
+  "name": "더박스 스터디",
+  "short_name": "더박스",
+  "description": "더박스 영어 회화 모임 사전학습 자료",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#fafbfc",
+  "theme_color": "#e63946",
+  "orientation": "portrait-primary",
+  "lang": "ko",
+  "icons": [
+    {
+      "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192'%3E%3Crect width='192' height='192' rx='40' fill='%23e63946'/%3E%3Ctext x='96' y='130' font-size='108' text-anchor='middle' fill='white' font-family='system-ui'%3E📚%3C/text%3E%3C/svg%3E",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Crect width='512' height='512' rx='100' fill='%23e63946'/%3E%3Ctext x='256' y='350' font-size='290' text-anchor='middle' fill='white' font-family='system-ui'%3E📚%3C/text%3E%3C/svg%3E",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

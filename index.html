@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#e63946" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#0f0f10" media="(prefers-color-scheme: dark)" />
+  <title>더박스 스터디</title>
+  <link rel="manifest" href="manifest.json" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23e63946'/%3E%3Ctext x='50' y='68' font-size='56' text-anchor='middle' fill='white' font-family='system-ui'%3E📚%3C/text%3E%3C/svg%3E" />
+  <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23e63946'/%3E%3Ctext x='50' y='68' font-size='56' text-anchor='middle' fill='white' font-family='system-ui'%3E📚%3C/text%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="assets/style.css?v=6" />
+</head>
+<body>
+  <header class="app-header">
+    <div class="header-row">
+      <a class="logo" href="#" aria-label="홈으로">
+        <span class="logo-mark">📚</span>
+        <span class="logo-text">더박스 <em>스터디</em></span>
+      </a>
+      <button id="theme-toggle" class="icon-btn" aria-label="다크모드 토글" title="다크모드 토글">
+        <span class="theme-icon-light">☀️</span>
+        <span class="theme-icon-dark">🌙</span>
+      </button>
+    </div>
+    <div class="search-row">
+      <input
+        type="search"
+        id="search"
+        placeholder="제목·키워드 검색 (예: 주식, dating, AI)"
+        autocomplete="off"
+        inputmode="search"
+      />
+      <button id="search-clear" class="icon-btn" aria-label="검색 지우기" hidden>✕</button>
+    </div>
+    <nav class="filter-row" id="category-filters" aria-label="카테고리 필터">
+      <!-- JS가 카테고리 칩 동적 생성 -->
+    </nav>
+  </header>
+
+  <main id="grid" class="card-grid" aria-live="polite">
+    <!-- JS가 카드 동적 생성 -->
+    <p class="loading">자료 불러오는 중…</p>
+  </main>
+
+  <p class="result-count" id="result-count"></p>
+
+  <!-- 상세 패널 (모달) -->
+  <aside id="detail" class="detail-panel" hidden aria-modal="true" role="dialog" aria-labelledby="detail-title">
+    <header class="detail-header">
+      <button id="detail-close" class="icon-btn lg" aria-label="닫기">✕</button>
+      <div class="detail-title-wrap">
+        <span id="detail-id-badge" class="id-badge"></span>
+        <span id="detail-cat-badge" class="cat-badge"></span>
+      </div>
+      <button id="detail-menu-btn" class="icon-btn lg" aria-label="옵션" aria-expanded="false">⋯</button>
+    </header>
+
+    <div id="detail-options" class="detail-options" hidden>
+      <div class="option-group">
+        <label class="opt-label">한국어 해석</label>
+        <button id="ko-toggle" class="toggle-pill" data-state="on">표시</button>
+      </div>
+      <div class="option-group">
+        <label class="opt-label">톤</label>
+        <div class="tone-chips">
+          <button class="tone-chip" data-tone="pro" data-state="on">👍 Pro</button>
+          <button class="tone-chip" data-tone="con" data-state="on">👎 Con</button>
+          <button class="tone-chip" data-tone="neutral" data-state="on">😐 Neutral</button>
+        </div>
+      </div>
+      <div class="option-group">
+        <label class="opt-label">TTS</label>
+        <button id="tts-rate" class="toggle-pill" data-rate="0.95">속도 보통</button>
+      </div>
+    </div>
+
+    <h1 id="detail-title" class="detail-title"></h1>
+    <div id="lesson-map" class="lesson-map" aria-label="수업 진행 섹션"></div>
+
+    <div id="detail-body" class="detail-body">
+      <!-- JS가 9개 섹션 렌더링 -->
+    </div>
+
+    <footer class="detail-footer">
+      <button id="prev-topic" class="nav-btn">← 이전</button>
+      <button id="next-topic" class="nav-btn">다음 →</button>
+    </footer>
+  </aside>
+
+  <div id="backdrop" class="backdrop" hidden></div>
+
+  <script src="assets/app.js?v=6" defer></script>
+</body>
+</html>

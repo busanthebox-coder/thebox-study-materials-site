@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#e63946" />
+  <title>PDF 모음 | 더박스 스터디</title>
+  <link rel="stylesheet" href="assets/style.css?v=7" />
+</head>
+<body class="print-page">
+  <header class="app-header">
+    <div class="header-row">
+      <a class="logo" href="index.html" aria-label="자료 앱으로 돌아가기">
+        <span class="logo-mark">📚</span>
+        <span class="logo-text">더박스 <em>PDF 모음</em></span>
+      </a>
+      <a class="header-link" href="index.html">자료 앱</a>
+    </div>
+    <div class="search-row">
+      <input
+        type="search"
+        id="pdf-search"
+        placeholder="PDF 검색 (예: MONEY, dating, AI)"
+        autocomplete="off"
+        inputmode="search"
+      />
+      <button id="pdf-search-clear" class="icon-btn" aria-label="검색 지우기" hidden>✕</button>
+    </div>
+    <nav class="filter-row" id="pdf-category-filters" aria-label="PDF 카테고리 필터"></nav>
+  </header>
+
+  <main class="print-shell">
+    <div class="print-toolbar">
+      <div>
+        <p class="print-kicker">A4 print files</p>
+        <h1>프린트용 PDF 모음</h1>
+      </div>
+      <p id="pdf-count" class="pdf-count"></p>
+    </div>
+    <section id="pdf-list" class="pdf-list" aria-live="polite">
+      <p class="loading">PDF 목록 불러오는 중…</p>
+    </section>
+  </main>
+
+  <script src="assets/print.js?v=7" defer></script>
+</body>
+</html>

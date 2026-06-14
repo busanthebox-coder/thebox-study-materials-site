@@ -130,7 +130,7 @@
       if (!res.ok) throw new Error('topics.json load failed');
       state.topics = await res.json();
     } catch (e) {
-      $('#grid').innerHTML = `<p class="loading">자료를 불러오지 못했어요. (${e.message})</p>`;
+      $('#grid').innerHTML = `<p class="loading">답변을 불러오지 못했어요. (${e.message})</p>`;
       return;
     }
 

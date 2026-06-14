@@ -5,21 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <meta name="theme-color" content="#e63946" media="(prefers-color-scheme: light)" />
   <meta name="theme-color" content="#0f0f10" media="(prefers-color-scheme: dark)" />
-  <title>더박스 스터디</title>
+  <title>더박스 답변</title>
   <link rel="manifest" href="manifest.json" />
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23e63946'/%3E%3Ctext x='50' y='68' font-size='56' text-anchor='middle' fill='white' font-family='system-ui'%3E📚%3C/text%3E%3C/svg%3E" />
   <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23e63946'/%3E%3Ctext x='50' y='68' font-size='56' text-anchor='middle' fill='white' font-family='system-ui'%3E📚%3C/text%3E%3C/svg%3E" />
-  <link rel="stylesheet" href="assets/style.css?v=6" />
+  <link rel="stylesheet" href="assets/style.css?v=8" />
 </head>
 <body>
   <header class="app-header">
     <div class="header-row">
       <a class="logo" href="#" aria-label="홈으로">
         <span class="logo-mark">📚</span>
-        <span class="logo-text">더박스 <em>스터디</em></span>
+        <span class="logo-text">더박스 <em>답변</em></span>
       </a>
       <div class="header-actions">
-        <a class="header-link" href="print.html" aria-label="PDF 모음 열기">PDF 모음</a>
+        <a class="header-link" href="print.html" aria-label="답지 PDF 모음 열기">답지 PDF</a>
         <button id="theme-toggle" class="icon-btn" aria-label="다크모드 토글" title="다크모드 토글">
           <span class="theme-icon-light">☀️</span>
           <span class="theme-icon-dark">🌙</span>
@@ -30,7 +30,7 @@
       <input
         type="search"
         id="search"
-        placeholder="제목·키워드 검색 (예: 주식, dating, AI)"
+        placeholder="답변 검색 (예: 주식, dating, AI)"
         autocomplete="off"
         inputmode="search"
       />
@@ -43,7 +43,7 @@
 
   <main id="grid" class="card-grid" aria-live="polite">
     <!-- JS가 카드 동적 생성 -->
-    <p class="loading">자료 불러오는 중…</p>
+    <p class="loading">답변 불러오는 중…</p>
   </main>
 
   <p class="result-count" id="result-count"></p>
@@ -93,6 +93,6 @@
 
   <div id="backdrop" class="backdrop" hidden></div>
 
-  <script src="assets/app.js?v=6" defer></script>
+  <script src="assets/app.js?v=8" defer></script>
 </body>
 </html>
